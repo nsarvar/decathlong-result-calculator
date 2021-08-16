@@ -7,6 +7,16 @@ Output file is XML file.
 
 ### Usage
 
+Build
+
+`mvn install`
+
+Test
+
+`mvn test`
+
+Run
+
 `java -jar -Dfile='/path/to/file.csv' decathlon-calculator-1.0.jar`
 
 Options:
@@ -14,8 +24,7 @@ Options:
 - `-Dfile` - input file (CSV file by default)
 - `-Dout` - path to write the result file  (XML file by default)
 
-
-# Technical requirements
+---
 
 - JDK 11
 - Maven

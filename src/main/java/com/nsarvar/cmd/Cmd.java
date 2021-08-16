@@ -17,11 +17,10 @@ public class Cmd implements Callable<String> {
     private final WriterStrategy writerStrategy;
 
     public Cmd() {
-//        filepath = System.getProperty("file");
+        filepath = System.getProperty("file");
         resultFilePath = System.getProperty("out", "");
-        filepath = "/Users/nsarvar/Downloads/results.csv";
-//        if (filepath == null || filepath.isEmpty())
-//            throw new IllegalArgumentException("File is not provided");
+        if (filepath == null || filepath.isEmpty())
+            throw new IllegalArgumentException("File is not provided");
 
         readerStrategy = new CSVReaderStrategy(filepath);
         writerStrategy = new XmlWriterStrategy();
